@@ -42,7 +42,7 @@ function addToCart(productId) {
 
 // Remove item from cart
 function removeFromCart(productId) {
-	let index=cart.splice(products.findIndex((item)=> item.id === productId));
+	let index=cart.splice(products.filter((item)=> item.id === productId));
 	if(index!==-1){
 		cart.splice(index,1)
 renderCart();
